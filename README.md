@@ -15,8 +15,7 @@ bin_search adds six methods to Ruby's Array class:
 * `bin_search_by` - same as `bin_search` but compares elements using `<=>` after mapping them with the provided block
 * `bin_assoc_by` - same as `bin_assoc` but compares elements using `<=>` after mapping them with the provided block
 
-Each of these methods needs to be called with a mode as a second argument.
-Available modes are:
+Each of these methods needs to be called with the searched element, and a mode as second argument. Available modes are:
 
 * `:asc` - array has been sorted in ascending order, find first element
 that is greater than or equal to the given element (default mode)
@@ -24,7 +23,7 @@ that is greater than or equal to the given element (default mode)
 * `:asc_eq` - same as `:asc` but only retuns the found element if it is equal
 * `:desc_eq` - same as `:desc` but only retuns the found element if it is equal
 
-If the sorting requirements of a mode are not met by the used arrays, the behavior of the bin_search methods is unspecified (i.e. arbitrary weird things may happpen).
+If the sorting requirements of a mode are not met by the used array, the behavior of the bin_search methods is unspecified (i.e. arbitrary weird things may happpen).
 
 Example
 
